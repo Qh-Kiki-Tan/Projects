@@ -72,11 +72,7 @@
             font-weight: bold;
             color: #7d6e91;
         }
-
-        section {
-            padding: 2rem;
-            background: white;
-        }
+      
          #figmaheading {
             line-height: 1.6;
             text-align: center;
@@ -110,12 +106,6 @@
             border-radius: 10% 10% 0 0;
         }
 
-        #figma h2 {
-            max-width: 2000px;
-            margin: 10 500; 
-            text-align: center;
-        }
-
         .figma-project p {
             color: #555;
             margin-bottom: 1rem; 
@@ -128,12 +118,21 @@
         .figma-project:hover {
             transform: scale(1.05);
         }
+      
+         #adobeheading {
+            background: #f8ecf0;
+            line-height: 1.6;
+            text-align: center;
 
+        }
 
         #Adobe{
             background: #f8ecf0;
             line-height: 1.6;
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            padding-top: 0;
         }
 
         #Adobe ul {
@@ -150,7 +149,35 @@
         #Adobe a:hover {
             color: #7d6e91;
         }
+
+        .adobe-project {
+            display: flex;
+            flex-direction: column; 
+            margin: 20px;
+            padding: 1rem;
+            max-width: 400px;
+            cursor: pointer;
+            transition: transform 0.3s; 
+            background: #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+        }
+
+        .adobe-project img {
+            width: 100%; 
+            height: auto;
+            border-radius: 10% 10% 0 0;
+        }
+
+        .abode-project p {
+            color: #555;
+            margin-bottom: 1rem; 
+        }
       
+        .adobe-project:hover {
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -231,10 +258,31 @@
     </div>
 </section>
 
+  <section id="adobeheading">
+  <h2>
+      Adobe Projects
+  </h2>
+ </section>
+  
 <section id="Adobe">
-    <h2>Adobe Projects</h2>
-    <p>Text.</p>
-</section> 
+    <div class="adobe-project" onclick="window.location.href='https://online.flippingbook.com/view/838141706/'">
+        <img src="Flipbook.png" alt="Flipbook">
+        <h3>Flipbox</h3>
+        <p>A zine-style story created mainly with Adobe Express and firefly.</p>
+    </div>
+
+    <div class="adobe-project" onclick="window.location.href='https://online.flippingbook.com/view/228539970/'">
+        <img src="Magazine.png" alt="Magazine">
+        <h3>Magazine</h3>
+        <p>Magazine Design and Layout, created mainly with Adobe InDesign.</p>
+    </div>
+
+    <div class="adobe-project" onclick="window.location.href='https://online.flippingbook.com/view/332539104'">
+        <img src="Posters.png" alt="Posters">
+        <h3>Posters</h3>
+        <p>Posters made with the Adobe Suite, including Illustrator, Photoshop, Indesign, Express, and Firefly.</p>
+    </div>
+</section>
 
 <footer>
     <p>&copy; 2024 Kiki Tan. All rights reserved.</p>
