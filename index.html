@@ -91,40 +91,45 @@
         #figma {
             line-height: 1.6;
             text-align: center;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: flex; /* Set layout to flex */
+            flex-wrap: wrap; /* Allow items to wrap */
+            justify-content: center; /* Center items */
+            margin-top: 2rem; /* Space above the section */
         }
 
-       .figma-project {
-          display: inline-block;
-          margin: 3rem;
-          padding: 1rem;
-          cursor: pointer;
-          transition: transform 0.3s;
-          max-width: 400px;
-          width: 100%;
-      }
+        .figma-project {
+            display: flex;
+            flex-direction: column;  /* Stack items vertically */
+            margin: 20px; /* Spacing between projects */
+            padding: 1rem; /* Spacing inside each project */
+            max-width: 300px; /* Limit max width for layout consistency */
+            cursor: pointer;
+            transition: transform 0.3s; 
+            background: #fff; /* Add background color to project cards */
+            border-radius: 10px; /* Round the corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        }
 
         .figma-project img {
-            width: 400;
-            height: auto; 
-            border-radius: 10%;
+            width: 100%; /* Full width of the project box */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10% 10% 0 0; /* Rounded corners on top */
         }
 
         .figma-project h3 {
-            margin: 0.5rem 0;
+            margin: 0.5rem 0; /* Space around title */
             font-weight: bold;
         }
 
         .figma-project p {
             color: #555;
+            margin-bottom: 1rem; /* Space below paragraphs */
         }
 
-        .figma-project:hover {
-            transform: scale(1.05);
-        }
-      
+        .figma-project ul {
+            text-align: left;
+              }
+
         #Adobe{
             background: #f8ecf0;
             line-height: 1.6;
@@ -206,29 +211,31 @@
         <img src="Co-Hop.png" alt="Co-Hop">
         <h3>Co-Hop</h3>
         <p>
-        Co-Hop, a mobile app designed to address unpredictable nature of co-op job placements, leading to frequent, last-minute housing searches. Co-Hop solve this by providing a dedicated platform for co-op students to find housing. <br> <strong>Key features </strong>include:
+            Co-Hop, a mobile app designed to address the unpredictable nature of co-op job placements, leading to frequent, last-minute housing searches. Co-Hop solves this by providing a dedicated platform for co-op students to find housing.
         </p>
-         <ul>
-          <li>
-            <strong>Targeted Housing Search</strong> Focuses on co-op work terms and study periods.
-          </li>
-          <li>
-            <strong>Verified Listings &amp Peer-to-Peer: </strong>Eliminates third-party involvement, promoting direct interaction between students and landlords. 
-          </li>
-           <li>
-            <strong>Secure In-App Chat: </strong>Facilitates communication between users.
-          </li>
-                   <li>
-            <strong>Community Page:  </strong>Allows students to share tips, advice, and connect with others.
-          </li>
+        <strong>Key features include:</strong>
+        <ul>
+            <li><strong>Targeted Housing Search:</strong> Focuses on co-op work terms and study periods.</li>
+            <li><strong>Verified Listings &amp Peer-to-Peer:</strong> Eliminates third-party involvement for direct interaction.</li>
+            <li><strong>Secure In-App Chat:</strong> Facilitates communication between users.</li>
+            <li><strong>Community Page:</strong> Allows students to share tips and connect.</li>
         </ul>       
         <p>
-          The app's development followed a Design Thinking process, involving user research (interviews), ideation, prototyping (low-fidelity and high-fidelity), and user testing.  Feedback led to improvements in typography, interactive elements, and usability. </p>
+            The app's development followed a Design Thinking process, involving user research, ideation, prototyping, and user testing. Feedback led to improvements in typography, interactive elements, and usability.
+        </p>
     </div>
+
     <div class="figma-project" onclick="window.location.href='https://www.figma.com/proto/Mq5AsN0nMFUSdE3cT8adIQ/BET-350?node-id=1-1238&starting-point-node-id=1%3A1238'">
         <img src="app.png" alt="WasteSort">
         <h3>WasteSort</h3>
-        <p>WasteSort is a mobile app designed to improve restaurant waste management and promote sustainability. The app addresses the problem of inconsistent and inconvenient waste sorting practices in restaurants.  WasteSort aims to raise environmental awareness, add convenience for customers, and provide monetary benefits through an EcoPoints reward system for using reusable items and proper waste disposal. The app uses QR code scanning to identify food items and provide personalized sorting instructions, integrates online ordering to reduce wait times, and allows users to track their environmental contributions.  The team conducted research through autoethnography, secondary research, and informal conversations to inform their design.</p>
+        <p>WasteSort is a mobile app designed to improve restaurant waste management and promote sustainability. The app addresses the problem of inconsistent and inconvenient waste sorting practices in restaurants.</p>
+        <strong>Key features include:</strong>
+        <ul>
+            <li><strong>QR Code Scanning:</strong> Identifies food items and provides sorting instructions.</li>
+            <li><strong>Online Ordering Integration:</strong> Reduces wait times and encourages better waste management.</li>
+            <li><strong>EcoPoints Reward System:</strong> Incentivizes users for applying sustainable practices.</li>
+        </ul>
+        <p>Through autoethnography and secondary research, the team informed their design and refined the app's features.</p>
     </div>
 </section>
 
