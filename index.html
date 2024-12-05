@@ -1,201 +1,275 @@
 <!DOCTYPE html>
-<html lang="eng-ca">
-  <head>
-    <meta charset="utc-8">
-    <title>Exercise 6: Navigation</title>
-    <!-- This is code to embed/employ Google Fonts in the site design, we'll learn more about this next week--->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- End of Google Fonts embed--->
-    <!-- Created by Kiki Tan on Oct 25, 2024--->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiki Tan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Castoro Titling" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-      #header,
-      .courses,
-      #footer,
-      #sidebar,
-      #nav,
-      .article,
-      figure,
-      figcaption {
-        display: block;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Castoro Titling';
+        }
+        body {
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #f0f0ef;
+            color: #333;
+        }
+
+        header {
+            background-color: #39141f;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+        
+        header a h1 {
+          text-decoration: none;
+          color: white;
+        }
+         header a h1:hover {
+            color: #7d6e91;
+        }
+
+        nav {
+            margin-left: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #d17b95;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #7d6e91;
+        }
+
+        nav ul li.highlighted {
+            font-weight: bold;
+            color: #7d6e91;
+        }
+
+        button {
+            background-color: #d17b95; 
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s; 
+        }
+
+        button:hover {
+            background-color: #7d6e91; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 2rem;
+            background: white;
+        }
+
+        #figma {
+            line-height: 1.6;
+            text-align: center;
+        }
+
+       .figma-project {
+          display: inline-block;
+          margin: 3rem;
+          padding: 1rem;
+          cursor: pointer;
+          transition: transform 0.3s;
+          max-width: 400px;
+          width: 100%;
       }
 
-      body {
-        color: #666666;
-        background-color: #f9f8f6;
-        background-image: url("https://i.imgur.com/px0ic4P.jpg");
-        background-position: center;
-        font-family: "Roboto", Times, serif;
-        line-height: 1.4em;
-        margin: 0px;
-      }
+        .figma-project img {
+            width: 400;
+            height: auto; 
+            border-radius: 10%;
+        }
 
-      .wrapper {
-        width: 940px;
-        margin: 20px auto 20px auto;
-        border: 2px solid #000000;
-        background-color: #ffffff;
-      }
+        .figma-project h3 {
+            margin: 0.5rem 0;
+            font-weight: bold;
+        }
 
-      #header {
-        height: 160px;
-        background-image: url("https://i.imgur.com/4rcWA3C.jpg");
-      }
+        .figma-project p {
+            color: #555;
+        }
 
-      h1 {
-        text-indent: -9999px;
-        width: 940px;
-        height: 130px;
-        margin: 0px;
-      }
+        .figma-project:hover {
+            transform: scale(1.05);
+        }
+      
+        #Adobe{
+            background: #f8ecf0;
+            line-height: 1.6;
+            text-align: center;
+        }
 
-      #footer {
-        clear: both;
-        color: #ffffff;
-        background-color: #aeaca8;
-        height: 30px;
-        font-size: 80%;
-        padding: 7px 0px 0px 20px;
-      }
+        #Adobe ul {
+            padding: 0;
+            list-style: none;
+        }
 
-      .courses {
-        float: left;
-        width: 659px;
-        border-right: 1px solid #eeeeee;
-      }
+        #Adobe a {
+            color: black;
+            text-decoration: none;
 
-      .article {
-        clear: both;
-        overflow: auto;
-        width: 100%;
-      }
+        }
 
-      .hgroup {
-        margin-top: 40px;
-      }
+        #Adobe a:hover {
+            color: #7d6e91;
+        }
 
-      figure {
-        float: left;
-        width: 290px;
-        height: 220px;
-        padding: 5px;
-        margin: 20px;
-        border: 1px solid #eeeeee;
-      }
+        #skills {
+            line-height: 1.6;
+            text-align: center;
+        }
 
-      figcaption {
-        font-size: 90%;
-        text-align: left;
-        font-weight: 300;
-        font-style: normal;
-      }
+        #skills b {
+            color: #8689ac;
+        }
+      
+        #skills ul {
+            padding: 0;
+            list-style: none;
+        }
+      
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: #39141f;
+            color: #d17b95;
+        }
 
-      #sidebar {
-        width: 230px;
-        float: left;
-        padding: 0px 0px 0px 20px;
-      }
+        strong {
+            color: #d17b95;
+        }
+      table {
+        width: 100%; 
+        margin-top: 1rem; 
+        border-collapse: collapse; 
+    }
 
-      h2 {
-        margin: 10px 0px 5px 0px;
-        padding: 0px;
-        font-weight: 700;
-        font-style: normal;
-      }
+    th, td {
+        border: 1px solid #d17b95; 
+        padding: 10px;
+        text-align: center; 
+    }
 
-      h3 {
-        margin: 0px 0px 10px 0px;
-        color: #de6581;
-        font-weight: 500;
-        font-style: normal;
-      }
-
-      #sidebar h2 {
-        padding: 30px 0px 10px 0px;
-      }
-      ul {
-        list-style-type: none;
-        margin: 0px;
-        padding: 0px;
-        overflow: hidden;
-        background-color: Grey;
-      }
-
-      li {
-        float: left;
-      }
-
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 5px 25px;
-        text-decoration: none;
-      }
-
-      li a:hover {
-        color: red;
-      }
-
+    th {
+        background-color: #f8ecf0; 
+    }
     </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div id="header">
-        <h1>Yoko's Kitchen</h1>
-        <div id="nav">
-          <ul>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/">CLASSES</a></li>
-            <li><a href="/">CATERING</a></li>
-            <li><a href="/">ABOUT</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="courses">
-        <div class="article">
-          <figure>
-            <img src="https://i.imgur.com/GaC5TSH.jpg" alt="Bok Choi">
-            <figcaption>Bok Choi</figcaption>
-          </figure>
-          <div class="hgroup">
-            <h2>Japanese Vegetarian</h2>
-            <h3>Five week course in London</h3>
-          </div>
-          <p>A five week introduction to traditional Japanese vegetarian meals, tefaching you a selection of rice and noodle dishes.</p>
-        </div>
-        <div class="article">
-          <figure>
-            <img src="https://i.imgur.com/dd27k4P.jpg" alt="Teriyaki sauce">
-            <figcaption>Teriyaki Sauce</figcaption>
-          </figure>
-          <div class="hgroup">
-            <h2>Sauces Masterclass</h2>
-            <h3>One day workshop</h3>
-          </div>
-          <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
-        </div>
-      </div>
-      <div id="sidebar">
-        <div class="popular-recipes">
-          <h2>Popular Recipes</h2>
-          Yakitori (grilled chicken)
-          Tsukune (minced chicken patties)
-          Okonomiyaki (savory pancakes)
-          Mizutaki (chicken stew)
-        </div>
-        <div class="contact-details">
-          <h2>Contact</h2>
-          <p>Yoko's Kitchen<br>
-            27 Redchurch Street<br>
-            Shoreditch<br>
-            London E2 7DP</p>
-        </div>
-      </div>
-      <div id="footer">
-        &copy; 2024 Yoko's Kitchen
-      </div>
+</head>
+<body>
+
+<header>
+    <a href="https://qh-kiki-tan.github.io/PersonalWebsite/#contact"><h1>Kiki Tan</h1></a> 
+   <nav>
+    <ul>
+        <li><a href="https://qh-kiki-tan.github.io/About/">About</a></li>
+        <li class="highlighted">Projects</li>
+        <li><a href="https://qh-kiki-tan.github.io/Contact/">Contact</a></li>
+    </ul>
+</nav>
+</header>
+  
+<section id="figma">
+    <h2>Figma Projects</h2>
+    <div class="figma-project" onclick="window.location.href='https://www.figma.com/proto/43utt4fzKoGgri1SN7r3DA/GBDA210-group-project?node-id=760-8953&t=V5fmRozTxrRvVG1u-1&starting-point-node-id=760%3A8953'">
+        <img src="Co-Hop.png" alt="Co-Hop">
+        <h3>Co-Hop</h3>
+        <p>
+        Co-Hop, a mobile app designed to address unpredictable nature of co-op job placements, leading to frequent, last-minute housing searches. Co-Hop solve this by providing a dedicated platform for co-op students to find housing. <br> <strong>Key features </strong>include:
+        </p>
+         <ul>
+          <li>
+            <strong>Targeted Housing Search</strong> Focuses on co-op work terms and study periods.
+          </li>
+          <li>
+            <strong>Verified Listings &amp Peer-to-Peer: </strong>Eliminates third-party involvement, promoting direct interaction between students and landlords. 
+          </li>
+           <li>
+            <strong>Secure In-App Chat: </strong>Facilitates communication between users.
+          </li>
+                   <li>
+            <strong>Community Page:  </strong>Allows students to share tips, advice, and connect with others.
+          </li>
+        </ul>       
+        <p>
+          The app's development followed a Design Thinking process, involving user research (interviews), ideation, prototyping (low-fidelity and high-fidelity), and user testing.  Feedback led to improvements in typography, interactive elements, and usability. </p>
     </div>
-  </body>
+    <div class="figma-project" onclick="window.location.href='https://www.figma.com/proto/Mq5AsN0nMFUSdE3cT8adIQ/BET-350?node-id=1-1238&starting-point-node-id=1%3A1238'">
+        <img src="app.png" alt="Recycling App">
+        <h3>Recycling App</h3>
+        <p>Description of Project 2.</p>
+    </div>
+</section>
+
+<section id="Adobe">
+    <h2>Adobe Projects</h2>
+    <p>Text.</p>
+</section> 
+
+<section id="skills">
+    <h2>Skills</h2>
+  <h4>Language </h4>
+   <ul>
+    <li>
+      <strong>Chinese: </strong> Native
+    </li>
+    <li>
+      <strong>English:</strong> Native
+    </li>
+     <li>
+      <strong>Computing Language: </strong> C++, Java, Phython, Lua, HTML, SQL
+    </li>
+  </ul>
+  <h4>
+    Softwares
+  </h4>
+     <ul>
+    <li>
+      <strong>Adobe: </strong> Photoshop, Illustrator, InDesign, Express, Firefly
+    </li>
+    <li>
+      <strong>Microsoft: </strong> Word, Powerpoint, Excel, OneNote, Hololens
+    </li>
+    <li>
+      <strong>Figma </strong> 
+    </li>
+    <li>
+      <strong>ChatGPT</strong> 
+    </li>
+  </ul>
+</section>
+  
+<footer>
+    <p>&copy; 2024 Kiki Tan. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
